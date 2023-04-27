@@ -10,16 +10,19 @@ body {
 h1 {
   text-align: center;
   color: grey;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
 .App {
   background-color: white;
   /* height: 100vh; */
-  padding: 40px;
+  padding: 20px 40px;
   width: 1300px;
-  height: 800px;
+  height: 750px;
   margin: auto;
   margin-top: 40px;
+  border-radius: 10px;
 }
 .pokedex {
   display: grid;
