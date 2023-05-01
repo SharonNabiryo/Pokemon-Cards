@@ -1,7 +1,20 @@
 import React from "react";
 
 export default function Pokecard(props) {
-  const pokeImg = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.id}.png`;
+  function addLeadingZeros(id) {
+    if (id < 10) {
+      return `00${id}`;
+    } else if (id < 100) {
+      return `0${id}`;
+    } else {
+      return id.toString();
+    }
+  }
+
+  const pokeImg = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${addLeadingZeros(
+    props.id
+  )}.png`;
+
   return (
     <div className="card">
       <h2>{props.name}</h2>
@@ -11,3 +24,5 @@ export default function Pokecard(props) {
     </div>
   );
 }
+
+//   const pokeImg = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.id}.png`;
